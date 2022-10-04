@@ -10,24 +10,13 @@
     <!-- 使用property标签完成属性注入 在bean里加入<property> 标签-->
     <!-- name is for attribute, value is just value -->
        <property name="bname" value="Parker's book"></property>
-
-     <!--value is null-->
-      <property name="author">
-          <null/>
-      </property>
-
-
-      <!--attributes value has special symbol -->
-      <property name="author" >
-          <value><![CDATA[<Parker>]]></value>
-      </property>
   </bean>
 
 
    <!-- 用有参数constructor 注入属性-->
   <bean id="order" class="com.parker.spring5.Order">
      <constructor-arg name="oName" value="abc"> </constructor-arg>
-      <constructor-arg index="1" value="Australia "> </constructor-arg>
+      <constructor-arg name="address" value="Australia "> </constructor-arg>
   </bean>
 
   </beans>

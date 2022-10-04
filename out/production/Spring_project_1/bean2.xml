@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--创建 service对象 和 dao对象-->
+  <bean id = "userService" class="com.parker.spring5.service.UserService">
+      <!-- 在service- 里注入UserDao对象 （UserDao实现类）-->
+    <property name="userDao" ref="userDaoImpl"></property>
+      <!--ref的值和下面用到的外部bean 的id 要对上， 即 userDaoImpl -->
+
+  </bean>
+
+    <!-- dao对象的类不能用interface， 要用 -->
+    <bean id = "userDaoImpl" class="com.parker.spring5.dao.UserDaoImpl"></bean>
+
+
+</beans>
