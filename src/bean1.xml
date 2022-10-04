@@ -10,6 +10,17 @@
     <!-- 使用property标签完成属性注入 在bean里加入<property> 标签-->
     <!-- name is for attribute, value is just value -->
        <property name="bname" value="Parker's book"></property>
+
+     <!--value is null-->
+      <property name="author">
+          <null/>
+      </property>
+
+
+      <!--attributes value has special symbol -->
+      <property name="author" >
+          <value><![CDATA[<Parker>]]></value>
+      </property>
   </bean>
 
 
